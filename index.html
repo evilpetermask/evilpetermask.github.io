@@ -1,0 +1,85 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>FounderTalk!</title>
+      
+      <style>
+          html, body {
+            height: 100%;
+            margin: 0;
+          }
+          
+          #left{
+              float:left;
+              width:50%;
+              height:100%;
+          }
+          #right{
+              float:right;
+              width:50%;
+              height:100%;
+          }
+          .b{
+              border: solid 3px #ff0042;
+              width:96%;
+              height:48%;
+              background: #380000;
+              color:#ff0042;
+              margin-top: 5px;
+              margin-bottom:5px;
+              margin-left:2%;
+              margin-right:2%;
+              font-size: 27px;
+              font-weight: bold;
+          }
+          #thing{
+              position: fixed;
+              width: 100%;
+              height: 100%;
+              left: 0;
+              top: 0;
+              background: black;
+              z-index: 10;
+          }
+      </style>
+      
+  </head>
+  <body>
+
+      <audio id="1">
+          <source src="iamthepetermask.mp3" type="audio/mpeg">
+      </audio>
+      <audio id="2">
+          <source src="iamevil.mp3" type="audio/mpeg">
+      </audio>
+      <audio id="3">
+          <source src="ow.mp3" type="audio/mpeg">
+      </audio>
+      <audio id="4">
+          <source src="laugh.mp3" type="audio/mpeg">
+      </audio>
+      
+<div id="thing">
+    <div id="left">
+        <button id="a" onclick="playAudio(1)" class="b" type="button">I am the Peter mask.</button>
+        <button id="c" onclick="playAudio(2)" class="b" type="button">I am evil.</button>
+    </div>
+    <div id="right">
+        <button id="e" onclick="playAudio(3)" class="b" type="button">Ow!</button>
+        <button id="d" onclick="playAudio(4)" class="b" type="button">Ahaha!</button>
+    </div>
+</div>
+      
+<script>
+
+function playAudio(num) {
+  var x = document.getElementById(num + ""); 
+  x.currentTime = 0;
+  x.play(); 
+} 
+
+</script>
+
+</body>
+</html>
